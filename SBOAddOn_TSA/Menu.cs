@@ -17,6 +17,7 @@ namespace SBOAddOn_TSA
             oMenus = Application.SBO_Application.Menus;
 
             SAPbouiCOM.MenuCreationParams oCreationPackage = null;
+
             oCreationPackage = ((SAPbouiCOM.MenuCreationParams)(Application.SBO_Application.CreateObject(SAPbouiCOM.BoCreatableObjectType.cot_MenuCreationParams)));
             oMenuItem = Application.SBO_Application.Menus.Item("43520"); // moudles'
 
@@ -27,7 +28,7 @@ namespace SBOAddOn_TSA
         
             oCreationPackage.Type = SAPbouiCOM.BoMenuType.mt_POPUP;
             oCreationPackage.UniqueID = "BIZD";
-            oCreationPackage.String = "BIZ-DIMENSION";
+            oCreationPackage.String = "BIZ Packages";
             //oCreationPackage.Image = sPath;
             oCreationPackage.Enabled = true;
             oCreationPackage.Position = -1;
@@ -51,9 +52,20 @@ namespace SBOAddOn_TSA
                 oMenus = oMenuItem.SubMenus;
 
                 //Create s sub menu
+                oCreationPackage.Type = SAPbouiCOM.BoMenuType.mt_POPUP;
+                oCreationPackage.UniqueID = "TLAF";
+                oCreationPackage.String = "TLA Folder";
+
+                oMenus.AddEx(oCreationPackage);
+
+                oMenuItem = Application.SBO_Application.Menus.Item("TLAF");
+                oMenus = oMenuItem.SubMenus;
+
+                oMenuItem = Application.SBO_Application.Menus.Item("TLAF");
+
                 oCreationPackage.Type = SAPbouiCOM.BoMenuType.mt_STRING;
-                oCreationPackage.UniqueID = "BIZD.Form1";
-                oCreationPackage.String = "General Authorizations";
+                oCreationPackage.UniqueID = "Admin";
+                oCreationPackage.String = "Admin";
 
                 oMenus.AddEx(oCreationPackage);
             }
