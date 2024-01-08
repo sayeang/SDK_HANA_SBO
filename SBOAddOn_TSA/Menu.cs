@@ -7,6 +7,8 @@ namespace SBOAddOn_TSA
 {
     class Menu
     {
+        private SAPbouiCOM.Application SBO_Application;
+
         public void AddMenuItems()
         {
             SAPbouiCOM.Menus oMenus = null;
@@ -18,9 +20,15 @@ namespace SBOAddOn_TSA
             oCreationPackage = ((SAPbouiCOM.MenuCreationParams)(Application.SBO_Application.CreateObject(SAPbouiCOM.BoCreatableObjectType.cot_MenuCreationParams)));
             oMenuItem = Application.SBO_Application.Menus.Item("43520"); // moudles'
 
+            //Declare Varible sPath that store directory 
+            //string sPath = null;
+            //sPath = System.Environment.CurrentDirectory + @"\bin\Debug\Biz-Logo16x16.bmp";
+            //sPath = sPath.Remove(sPath.Length - 9, 9);
+        
             oCreationPackage.Type = SAPbouiCOM.BoMenuType.mt_POPUP;
             oCreationPackage.UniqueID = "BIZD";
             oCreationPackage.String = "BIZ-DIMENSION";
+            //oCreationPackage.Image = sPath;
             oCreationPackage.Enabled = true;
             oCreationPackage.Position = -1;
 
@@ -33,25 +41,27 @@ namespace SBOAddOn_TSA
             }
             catch (Exception ex)
             {
-                Application.SBO_Application.MessageBox(ex.Message,);
+                Application.SBO_Application.SetStatusBarMessage(ex.Message, SAPbouiCOM.BoMessageTime.bmt_Short, true);
             }
 
-            //try
-            //{
-            //    // Get the menu collection of the newly added pop-up item
-            //    oMenuItem = Application.SBO_Application.Menus.Item("BIZ-DIMENSION1");
-            //    oMenus = oMenuItem.SubMenus;
+            try
+            {
+                // Get the menu collection of the newly added pop-up item
+                oMenuItem = Application.SBO_Application.Menus.Item("BIZD");
+                oMenus = oMenuItem.SubMenus;
 
-            //    // Create s sub menu
-            //    oCreationPackage.Type = SAPbouiCOM.BoMenuType.mt_STRING;
-            //    oCreationPackage.UniqueID = "BIZD.Form1";
-            //    oCreationPackage.String = "General Authorizations";
-            //    oMenus.AddEx(oCreationPackage);
-            //}
-            //catch (Exception ex)
-            //{ //  Menu already exists
-            //    Application.SBO_Application.SetStatusBarMessage("Menu Already Exists", SAPbouiCOM.BoMessageTime.bmt_Short, true);
-            //}
+                //Create s sub menu
+                oCreationPackage.Type = SAPbouiCOM.BoMenuType.mt_STRING;
+                oCreationPackage.UniqueID = "BIZD.Form1";
+                oCreationPackage.String = "General Authorizations";
+
+                oMenus.AddEx(oCreationPackage);
+            }
+            catch (Exception ex)
+            { //  Menu already exists
+                Application.SBO_Application.SetStatusBarMessage(ex.Message, SAPbouiCOM.BoMessageTime.bmt_Short, true);
+            }
+            
         }
 
         public void SBO_Application_MenuEvent(ref SAPbouiCOM.MenuEvent pVal, out bool BubbleEvent)
