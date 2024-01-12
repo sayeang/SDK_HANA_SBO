@@ -50,6 +50,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\NewForm 1.b1f.cs">
+      <DependentUpon>NewForm 1.b1f</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -65,6 +68,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Menu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="Forms\NewForm 1.b1f">
+      <FormCategory>UserForm</FormCategory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Master\" />

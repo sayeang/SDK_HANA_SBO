@@ -28,7 +28,7 @@ namespace SBOAddOn_TSA
         
             oCreationPackage.Type = SAPbouiCOM.BoMenuType.mt_POPUP;
             oCreationPackage.UniqueID = "BIZD";
-            oCreationPackage.String = "BIZ Packages";
+            oCreationPackage.String = "BIZ Add-on";
             //oCreationPackage.Image = sPath;
             oCreationPackage.Enabled = true;
             oCreationPackage.Position = -1;
@@ -52,22 +52,24 @@ namespace SBOAddOn_TSA
                 oMenus = oMenuItem.SubMenus;
 
                 //Create s sub menu
-                oCreationPackage.Type = SAPbouiCOM.BoMenuType.mt_POPUP;
-                oCreationPackage.UniqueID = "TLAF";
-                oCreationPackage.String = "TLA Folder";
-
-                oMenus.AddEx(oCreationPackage);
-
-                oMenuItem = Application.SBO_Application.Menus.Item("TLAF");
-                oMenus = oMenuItem.SubMenus;
-
-                oMenuItem = Application.SBO_Application.Menus.Item("TLAF");
-
                 oCreationPackage.Type = SAPbouiCOM.BoMenuType.mt_STRING;
-                oCreationPackage.UniqueID = "Admin";
-                oCreationPackage.String = "Admin";
+                oCreationPackage.UniqueID = "BIZD.Form1";
+                oCreationPackage.String = "Exemption";
 
                 oMenus.AddEx(oCreationPackage);
+
+                //oMenuItem = Application.SBO_Application.Menus.Item("TLAF");
+                //oMenus = oMenuItem.SubMenus;
+
+                ////Get the menu collection of the newly added pop-up item
+                //oMenuItem = Application.SBO_Application.Menus.Item("TLAF");
+
+                ////create the payroll menu item for master data
+                //oCreationPackage.Type = SAPbouiCOM.BoMenuType.mt_STRING;
+                //oCreationPackage.UniqueID = "Admin";
+                //oCreationPackage.String = "Admin";
+
+                //oMenus.AddEx(oCreationPackage);
             }
             catch (Exception ex)
             { //  Menu already exists
@@ -84,8 +86,8 @@ namespace SBOAddOn_TSA
             {
                 if (pVal.BeforeAction && pVal.MenuUID == "BIZD.Form1")
                 {
-                    Form1 activeForm = new Form1();
-                    activeForm.Show();
+                    NewForm_1_b1f actvieForm = new NewForm_1_b1f();
+                    actvieForm.Show();
                 }
             }
             catch (Exception ex)

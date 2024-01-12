@@ -34,6 +34,8 @@ namespace SBOAddOn_TSA
         /// </summary>
         public override void OnInitializeFormEvents()
         {
+            this.LoadAfter += new LoadAfterHandler(this.Form_LoadAfter);
+
         }
 
         private SAPbouiCOM.Button Button0;
@@ -50,5 +52,11 @@ namespace SBOAddOn_TSA
         private SAPbouiCOM.Folder Folder1;
         private SAPbouiCOM.Folder Folder2;
         private SAPbouiCOM.Grid Grid1;
+
+        private void Form_LoadAfter(SAPbouiCOM.SBOItemEventArg pVal)
+        {
+            throw new System.NotImplementedException();
+
+        }
     }
 }
