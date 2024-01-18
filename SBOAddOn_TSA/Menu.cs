@@ -47,29 +47,44 @@ namespace SBOAddOn_TSA
 
             try
             {
+                //==========================================================
+                //// Get the menu collection of the newly added pop-up item
+                //oMenuItem = Application.SBO_Application.Menus.Item("BIZD");
+                //oMenus = oMenuItem.SubMenus;
+
+                ////Create s sub menu
+                //oCreationPackage.Type = SAPbouiCOM.BoMenuType.mt_STRING;
+                //oCreationPackage.UniqueID = "BIZD.Form1";
+                //oCreationPackage.String = "Exemption";
+
+                //oMenus.AddEx(oCreationPackage);
+
+                //==========================================================
+
                 // Get the menu collection of the newly added pop-up item
                 oMenuItem = Application.SBO_Application.Menus.Item("BIZD");
                 oMenus = oMenuItem.SubMenus;
 
                 //Create s sub menu
-                oCreationPackage.Type = SAPbouiCOM.BoMenuType.mt_STRING;
-                oCreationPackage.UniqueID = "BIZD.Form1";
-                oCreationPackage.String = "Exemption";
-
+                oCreationPackage.Type = SAPbouiCOM.BoMenuType.mt_POPUP;
+                oCreationPackage.UniqueID = "BIZD1";
+                oCreationPackage.String = "Setup";
                 oMenus.AddEx(oCreationPackage);
 
-                //oMenuItem = Application.SBO_Application.Menus.Item("TLAF");
-                //oMenus = oMenuItem.SubMenus;
+                oMenuItem = Application.SBO_Application.Menus.Item("BIZD1");
+                oMenus = oMenuItem.SubMenus;
 
-                ////Get the menu collection of the newly added pop-up item
-                //oMenuItem = Application.SBO_Application.Menus.Item("TLAF");
+                //Get the menu collection of the newly added pop-up item
+                oMenuItem = Application.SBO_Application.Menus.Item("BIZD1");
+                oMenus = oMenuItem.SubMenus;
 
-                ////create the payroll menu item for master data
-                //oCreationPackage.Type = SAPbouiCOM.BoMenuType.mt_STRING;
-                //oCreationPackage.UniqueID = "Admin";
-                //oCreationPackage.String = "Admin";
+                //create the payroll menu item for master data
+                oCreationPackage.Type = SAPbouiCOM.BoMenuType.mt_STRING;
+                oCreationPackage.UniqueID = "BIZD.Form1";
+                oCreationPackage.String = "General Authorization";
 
-                //oMenus.AddEx(oCreationPackage);
+                oMenus.AddEx(oCreationPackage);
+                //==========================================================
             }
             catch (Exception ex)
             { //  Menu already exists
