@@ -7,7 +7,7 @@ namespace SBOAddOn_TSA
 {
     class Menu
     {
-        private SAPbouiCOM.Application SBO_Application;
+        //private SAPbouiCOM.Application SBO_Application;
 
         public void AddMenuItems()
         {
@@ -96,13 +96,12 @@ namespace SBOAddOn_TSA
         public void SBO_Application_MenuEvent(ref SAPbouiCOM.MenuEvent pVal, out bool BubbleEvent)
         {
             BubbleEvent = true;
-
             try
             {
                 if (pVal.BeforeAction && pVal.MenuUID == "BIZD.Form1")
                 {
                     NewForm_1_b1f actvieForm = new NewForm_1_b1f();
-                    actvieForm.Show();
+                    actvieForm.Show();                    
                 }
             }
             catch (Exception ex)
