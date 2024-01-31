@@ -22,13 +22,16 @@ namespace SBOAddOn_TSA
                 else
                 {
                     //If you want to use an add-on identifier for the development license, you can specify an add-on identifier string as the second parameter.
-                    //oApp = new Application(args[0], "XXXXX");
-                    oApp = new Application(args[0]);
+                    oApp = new Application(args[0], "5645523035446576656C6F706D656E743A4C30343433363437383030975ECC16F61EC64FED5F6DA1427614247AD80183");
+                    //oApp = new Application(args[0]);
                 }
                 Menu MyMenu = new Menu();
                 MyMenu.AddMenuItems();
                 oApp.RegisterMenuEventHandler(MyMenu.SBO_Application_MenuEvent);
                 Application.SBO_Application.AppEvent += new SAPbouiCOM._IApplicationEvents_AppEventEventHandler(SBO_Application_AppEvent);
+
+
+
                 oApp.Run();
             }
             catch (Exception ex)
