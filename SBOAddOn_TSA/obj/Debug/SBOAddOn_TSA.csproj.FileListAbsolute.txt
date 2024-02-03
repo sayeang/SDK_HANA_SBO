@@ -1,9 +1,9 @@
-D:\GitHub Projects\SBOAddOn_TSA\SBOAddOn_TSA\obj\Debug\SBOAddOn_TSA.csprojResolveAssemblyReference.cache
 D:\GitHub Projects\SBOAddOn_TSA\SBOAddOn_TSA\bin\Debug\SBOAddOn_TSA.exe.config
 D:\GitHub Projects\SBOAddOn_TSA\SBOAddOn_TSA\bin\Debug\SBOAddOn_TSA.exe
 D:\GitHub Projects\SBOAddOn_TSA\SBOAddOn_TSA\bin\Debug\SBOAddOn_TSA.pdb
-D:\GitHub Projects\SBOAddOn_TSA\SBOAddOn_TSA\bin\Debug\SAPBusinessOneSDK.dll
-D:\GitHub Projects\SBOAddOn_TSA\SBOAddOn_TSA\obj\Debug\SBOAddOn_TSA.exe
-D:\GitHub Projects\SBOAddOn_TSA\SBOAddOn_TSA\obj\Debug\SBOAddOn_TSA.pdb
 D:\GitHub Projects\SBOAddOn_TSA\SBOAddOn_TSA\obj\Debug\SBOAddOn_TSA.Properties.Resources.resources
 D:\GitHub Projects\SBOAddOn_TSA\SBOAddOn_TSA\obj\Debug\SBOAddOn_TSA.csproj.GenerateResource.Cache
+D:\GitHub Projects\SBOAddOn_TSA\SBOAddOn_TSA\obj\Debug\SBOAddOn_TSA.exe
+D:\GitHub Projects\SBOAddOn_TSA\SBOAddOn_TSA\obj\Debug\SBOAddOn_TSA.pdb
+D:\GitHub Projects\SBOAddOn_TSA\SBOAddOn_TSA\bin\Debug\SAPBusinessOneSDK.dll
+D:\GitHub Projects\SBOAddOn_TSA\SBOAddOn_TSA\obj\Debug\SBOAddOn_TSA.csprojResolveAssemblyReference.cache

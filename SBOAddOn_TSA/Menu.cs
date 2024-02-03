@@ -21,6 +21,9 @@ namespace SBOAddOn_TSA
             oCreationPackage = ((SAPbouiCOM.MenuCreationParams)(Application.SBO_Application.CreateObject(SAPbouiCOM.BoCreatableObjectType.cot_MenuCreationParams)));
             oMenuItem = Application.SBO_Application.Menus.Item("43520"); // moudles'
 
+            SAPbobsCOM.Company oCompany = new SAPbobsCOM.Company();
+            //oCompany = (SAPbobsCOM.Company)Application.SBO_Application.Company.GetDICompany();
+
             //Declare Varible sPath that store directory 
             //string sPath = null;
             //sPath = System.Environment.CurrentDirectory + @"\bin\Debug\Biz-Logo16x16.bmp";
