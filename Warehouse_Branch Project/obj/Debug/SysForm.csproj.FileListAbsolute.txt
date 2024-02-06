@@ -34,3 +34,10 @@ C:\Users\LENOVO\OneDrive - BIZDIMENSION CO., LTD\SAP Business One Studio\Warehou
 C:\Users\LENOVO\OneDrive - BIZDIMENSION CO., LTD\SAP Business One Studio\Warehouse_Branch\obj\Debug\SysForm.csproj.CopyComplete
 C:\Users\LENOVO\OneDrive - BIZDIMENSION CO., LTD\SAP Business One Studio\Warehouse_Branch\obj\Debug\SysForm.exe
 C:\Users\LENOVO\OneDrive - BIZDIMENSION CO., LTD\SAP Business One Studio\Warehouse_Branch\obj\Debug\SysForm.pdb
+D:\GitHub Projects\SBOAddOn_TSA\Warehouse_Branch Project\bin\Debug\SysForm.exe.config
+D:\GitHub Projects\SBOAddOn_TSA\Warehouse_Branch Project\obj\Debug\SysForm.exe
+D:\GitHub Projects\SBOAddOn_TSA\Warehouse_Branch Project\obj\Debug\SysForm.pdb
+D:\GitHub Projects\SBOAddOn_TSA\Warehouse_Branch Project\bin\Debug\SysForm.exe
+D:\GitHub Projects\SBOAddOn_TSA\Warehouse_Branch Project\bin\Debug\SysForm.pdb
+D:\GitHub Projects\SBOAddOn_TSA\Warehouse_Branch Project\bin\Debug\SAPBusinessOneSDK.dll
+D:\GitHub Projects\SBOAddOn_TSA\Warehouse_Branch Project\obj\Debug\SysForm.csprojResolveAssemblyReference.cache
