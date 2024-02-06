@@ -101,15 +101,16 @@ namespace SBOAddOn_TSA
             BubbleEvent = true;
             try
             {
-                if (pVal.BeforeAction && pVal.MenuUID == "BIZD.Form1")
+                if (pVal.BeforeAction==false && pVal.MenuUID == "BIZD.Form1")
                 {
                     NewForm_1_b1f actvieForm = new NewForm_1_b1f();
-                    actvieForm.Show();                    
+                    actvieForm.Show();
+                                     
                 }
             }
             catch (Exception ex)
             {
-                Application.SBO_Application.MessageBox(ex.ToString(), 1, "Ok", "", "");
+            //    //Application.SBO_Application.MessageBox(ex.ToString(), 1, "Ok", "", "");
             }
         }
 
