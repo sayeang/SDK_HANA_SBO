@@ -19,9 +19,9 @@ namespace SysForm
         public SAPbouiCOM.Item oItem1;
         public SAPbouiCOM.Column oColumn;
         public SAPbouiCOM.Columns oColumns;
-        public SAPbobsCOM.UserTable oUserTable;
+        //public SAPbobsCOM.UserTable oUserTable;
         public SAPbobsCOM.Users oUser;
-        public SAPbouiCOM.DataTable dataTable, dataTable1, dataTable2, dataTable3;
+        public SAPbouiCOM.DataTable dataTable, dataTable1, dataTable2, dataTable3, dataTableM;
         public SAPbouiCOM.UserDataSource oUserData;
         public SAPbouiCOM.Folder oFolderItem;
         public SAPbouiCOM.Matrix oMatrix;
@@ -54,13 +54,10 @@ namespace SysForm
 
             // get an initialized application object
             SBO_Application = SboGuiApi.GetApplication(-1);
-
         }
-
-
         public void AddItemsToOrderForm()
         {
-            company = (SAPbobsCOM.Company)SBO_Application.Company.GetDICompany();
+            //company = (SAPbobsCOM.Company)SBO_Application.Company.GetDICompany();
             dataTable1 = oOrderForm.DataSources.DataTables.Add("DT_2");
             dataTable2 = oOrderForm.DataSources.DataTables.Add("DT_3");
             //*********Text Warehouse*************************************************************
@@ -137,9 +134,6 @@ namespace SysForm
             oCheckBox3 = ((SAPbouiCOM.CheckBox)(oNewItem.Specific));
             oCheckBox3.Caption = "Lube";
             oCheckBox3.Checked = false;
-            oOrderForm.Refresh();
-            //LoadDataLOB();
-
         }
 
         public SystemForm()
@@ -159,18 +153,22 @@ namespace SysForm
             }
             catch (Exception ex)
             {
-                SBO_Application.SetStatusBarMessage("Please select \"User Name\"");
+                SBO_Application.SetStatusBarMessage(ex.Message);
             }
 
         }
 
         public void AddMatrix()
         {
-            sForm = SBO_Application.Forms.Add("M03");
+            try
+            {
+            //Declaretion**********************************************************
+            sForm = SBO_Application.Forms.Add("Mt_5");
             oUserData = sForm.DataSources.UserDataSources.Add("SYS_100", SAPbouiCOM.BoDataType.dt_SHORT_TEXT, 20);
             dataTable = sForm.DataSources.DataTables.Add("DT_1");
-            oUserTable = (SAPbobsCOM.UserTable)company.UserTables.Item("USRW");
-
+            dataTableM = sForm.DataSources.DataTables.Add("DT_M");
+            //oUserTable = (SAPbobsCOM.UserTable)company.UserTables.Item("USRW");
+            //*******************************************************************
             sForm.Title = "List of Warehouse";
             sForm.Mode = SAPbouiCOM.BoFormMode.fm_OK_MODE;
             //*******************************************************************
@@ -207,7 +205,6 @@ namespace SysForm
             oColumn.TitleObject.Caption = "Assigned";
             oColumn.Width = 30;
             oColumn.Editable = true;
-            //oCheckBox = ((SAPbouiCOM.CheckBox)(mItem.Specific));
             //******************************************************************
             oItem = sForm.Items.Add("1", SAPbouiCOM.BoFormItemTypes.it_BUTTON);
             oItem.Left = 5;
@@ -233,7 +230,8 @@ namespace SysForm
             oItem.Height = 20;
             txtFind = ((SAPbouiCOM.EditText)(oItem.Specific));
             txtFind.TabOrder = 0;
-            sForm.Mode = SAPbouiCOM.BoFormMode.fm_OK_MODE;
+            //sForm.Mode = SAPbouiCOM.BoFormMode.fm_OK_MODE;
+             oItem.AffectsFormMode = false;
             //******************************************
             oItem = sForm.Items.Add("BtnFind", SAPbouiCOM.BoFormItemTypes.it_BUTTON);
             oItem.Left = 170;
@@ -246,12 +244,28 @@ namespace SysForm
 
             LoadData();
             sForm.Visible = true;
+            }
+            catch (Exception ex)
+            {
+                SBO_Application.SetStatusBarMessage(ex.Message);
+                //throw;
+            }
         }
 
+        
+
+        public void Count()
+        {
+            for (int i = 1; i <= oMatrix.RowCount; i++)
+            {
+                SBO_Application.SetStatusBarMessage(i.ToString());
+            }
+        }
         public void LoadData()
         {
             try
             {
+                
                 //dataTable = sForm.DataSources.DataTables.Add("DT_1");
                 char[] charsToTrim = { '<', '/', 'U', 'S', 'E', 'R', 'I', 'D', '>', '<', '/', 'U', 's', 'e', 'r', 'P', 'a', 'r', 'a', 'm', 's', '>' };
                 string title1 = oOrderForm.BusinessObject.Key.Substring(60).Trim(charsToTrim);
@@ -266,30 +280,27 @@ namespace SysForm
                 //End Bind Data*********************************************
                 oMatrix.AutoResizeColumns();
                 oMatrix.LoadFromDataSourceEx();
+
             }
             catch (Exception ex)
             {
-
                 SBO_Application.SetStatusBarMessage("Please select \"User Name\"");
             }
 
         }
         public void Delete()
         {
-            for (int i = 1; i <= oMatrix.RowCount; i++)
-            {
-                oCheckBox = (SAPbouiCOM.CheckBox)oMatrix.Columns.Item("Check").Cells.Item(i).Specific;
-
-                if (oCheckBox.Checked == true)
-                {
-                    SAPbouiCOM.DataTable dataTable = sForm.DataSources.DataTables.Item("DT_1");
-                    char[] charsToTrim = { '<', '/', 'U', 'S', 'E', 'R', 'I', 'D', '>', '<', '/', 'U', 's', 'e', 'r', 'P', 'a', 'r', 'a', 'm', 's', '>' };
-                    string title1 = oOrderForm.BusinessObject.Key.Substring(60).Trim(charsToTrim);
-                    string Query1 = "DELETE FROM \"TL_WAREH\" WHERE \"UserID\"='" + title1 + "' ";
-                    dataTable.ExecuteQuery(Query1);
-                    SBO_Application.SetStatusBarMessage("Updating...", SAPbouiCOM.BoMessageTime.bmt_Short, false);
-                }
-            }
+            //for (int i = 1; i <= oMatrix.RowCount; i++)
+            //{
+               // oCheckBox = (SAPbouiCOM.CheckBox)oMatrix.Columns.Item("Check").Cells.Item(i).Specific;
+                SAPbouiCOM.DataTable dataTable = sForm.DataSources.DataTables.Item("DT_1");
+                char[] charsToTrim = { '<', '/', 'U', 'S', 'E', 'R', 'I', 'D', '>', '<', '/', 'U', 's', 'e', 'r', 'P', 'a', 'r', 'a', 'm', 's', '>' };
+                string title1 = oOrderForm.BusinessObject.Key.Substring(60).Trim(charsToTrim);
+                string Query1 = "DELETE FROM \"TL_WAREH\" WHERE \"UserID\"='" + title1 + "' ";
+                dataTable.ExecuteQuery(Query1);
+                //SBO_Application.SetStatusBarMessage("Updating...", SAPbouiCOM.BoMessageTime.bmt_Short, false);
+            //}
+            SBO_Application.SetStatusBarMessage("Updating...", SAPbouiCOM.BoMessageTime.bmt_Short, false);
         }
         public void Add()
         {
@@ -306,9 +317,10 @@ namespace SysForm
                     string Query = "INSERT INTO \"TL_WAREH\"(\"UserID\",\"WhsCode\",\"UpdateDate\") " +
                                     "VALUES('" + title1 + "','" + A + "',CURRENT_TIMESTAMP)";
                     dataTable.ExecuteQuery(Query);
-                    SBO_Application.SetStatusBarMessage("Updating...", SAPbouiCOM.BoMessageTime.bmt_Short, false);
+                   // SBO_Application.SetStatusBarMessage("Updating...", SAPbouiCOM.BoMessageTime.bmt_Short, false);
                 }
             }
+            SBO_Application.SetStatusBarMessage("Updating...", SAPbouiCOM.BoMessageTime.bmt_Short, false);
         }
         public void LoadDataLOB()
         {
@@ -326,7 +338,6 @@ namespace SysForm
             {
                 SBO_Application.SetStatusBarMessage("Please select \"User Name\"");
             }
-
         }
         public void DeleteLOB()
         {
@@ -344,10 +355,7 @@ namespace SysForm
             catch (Exception ex)
             {
                 SBO_Application.SetStatusBarMessage("Please select \"User Name\"");
-
             }
-
-
         }
         public void AddLOB()
         {
@@ -357,7 +365,7 @@ namespace SysForm
                 {
                     char[] charsToTrim = { '<', '/', 'U', 'S', 'E', 'R', 'I', 'D', '>', '<', '/', 'U', 's', 'e', 'r', 'P', 'a', 'r', 'a', 'm', 's', '>' };
                     string title1 = oOrderForm.BusinessObject.Key.Substring(60).Trim(charsToTrim);
-                    SAPbobsCOM.Recordset oRecordSet1 = (SAPbobsCOM.Recordset)company.GetBusinessObject(SAPbobsCOM.BoObjectTypes.BoRecordset);
+                    //SAPbobsCOM.Recordset oRecordSet1 = (SAPbobsCOM.Recordset)company.GetBusinessObject(SAPbobsCOM.BoObjectTypes.BoRecordset);
                     string A1 = "N";
                     string A2 = "N";
                     string A3 = "N";
@@ -375,14 +383,19 @@ namespace SysForm
                     }
 
                     string QueryInsert = "INSERT INTO \"TL_LOB\" (\"UserID\",\"Lob_Fuel\",\"Lob_LPG\",\"Lob_Lube\",\"UpdateDate\") VALUES('" + title1 + "','" + A1 + "','" + A2 + "','" + A3 + "',CURRENT_TIMESTAMP )";
-                    oRecordSet1.DoQuery(QueryInsert);
+                    //oRecordSet1.DoQuery(QueryInsert);
+                    dataTable2.ExecuteQuery(QueryInsert);
                     SBO_Application.SetStatusBarMessage("Updating...", SAPbouiCOM.BoMessageTime.bmt_Short, false);
                 }
+                //else
+                //{
+                //    SBO_Application.SetStatusBarMessage("Please select [User Code]");
+                //}
             }
             catch (Exception ex)
             {
 
-                SBO_Application.SetStatusBarMessage("Please select \"User Name\"" + ex.Message);
+                SBO_Application.SetStatusBarMessage(ex.Message);
             }
 
         }
@@ -397,9 +410,8 @@ namespace SysForm
                 {
                     Delete();
                     Add();
-
                 }
-
+                //sForm.Mode = SAPbouiCOM.BoFormMode.fm_OK_MODE;
             }
             catch (Exception er)
             {
@@ -410,59 +422,90 @@ namespace SysForm
         private void OMatrix_DoubleClickAfter(object sboObject, SAPbouiCOM.SBOItemEventArg pVal)
         {
             //throw new NotImplementedException();
-            if (pVal.ColUID == "Check" && pVal.Row == 0)
+            try
             {
-                //for (int i = 1; i <= oMatrix.RowCount; i++)
-                //{
-                //    oCheckBox = (SAPbouiCOM.CheckBox)oMatrix.Columns.Item("Check").Cells.Item(i).Specific;
-                //    if (oCheckBox.Checked == true)
-                //    {
-                //        oCheckBox.Checked = false;
-                //        sForm.Mode = SAPbouiCOM.BoFormMode.fm_UPDATE_MODE;
-                //    }
-                //else
-                //{
-                //    //oCheckBox.Checked = true;
-                //    sForm.Mode = SAPbouiCOM.BoFormMode.fm_OK_MODE;
-                //}
-                //oMatrix.LoadFromDataSource();
-                //mItem.Visible = true;
-                //}
-                //oUserData = sForm.DataSources.UserDataSources.Item("SYS_100");
-                // oColumns.Item("Check").DataBind.SetBound(true, "", "SYS_100");
-                //if (oUserData.Value == "Y")
-                //{
-                //    oUserData.Value = "N";
-                //    //Okay.Caption = "Update";
-                //}
-                //else
-                //{
-                //    oUserData.Value = "Y";
-                //}
-                //oMatrix.LoadFromDataSource();
-                //oMatrix.AutoResizeColumns();
-
+                dataTable = sForm.DataSources.DataTables.Item("DT_1");
+                if (pVal.ColUID == "Check" && pVal.Row == 0)
+                {
+                    string checkboxValue = dataTable.GetValue("CheckBox", oMatrix.RowCount - 1).ToString();
+                    // Toggle the checkbox value for all rows
+                    for (int i = 0; i < oMatrix.RowCount; i++)
+                    {
+                       // sForm.Visible = false;
+                        dataTable.SetValue("CheckBox", i, (checkboxValue == "N") ? "Y" : "N");
+                    }
+                    // Refresh the matrix to update the checkbox display
+                    sForm.Mode = SAPbouiCOM.BoFormMode.fm_UPDATE_MODE;
+                    oMatrix.LoadFromDataSource();
+                   // sForm.Visible = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                SBO_Application.SetStatusBarMessage("Warehouse updated "+"["+ex.Message+"]", SAPbouiCOM.BoMessageTime.bmt_Short, true);
             }
         }
-
         private void FButton_ClickBefore(object sboObject, SAPbouiCOM.SBOItemEventArg pVal, out bool BubbleEvent)
         {
 
             BubbleEvent = true;
             try
             {
-                char[] charsToTrim = { '<', '/', 'U', 'S', 'E', 'R', 'I', 'D', '>', '<', '/', 'U', 's', 'e', 'r', 'P', 'a', 'r', 'a', 'm', 's', '>' };
-                string title1 = oOrderForm.BusinessObject.Key.Substring(60).Trim(charsToTrim);
-                string textbox = txtFind.Value.ToString();
-                string Query1 = "SELECT ROW_NUMBER() OVER(ORDER BY B.\"BPLId\",A.\"WhsCode\") AS \"A\",B.\"BPLName\",A.\"WhsCode\",A.\"WhsName\",CASE WHEN D.\"WhsCode\" IS NOT NULL and D.\"UserID\" IS NOT NULL THEN 'Y' ELSE 'N' END \"CheckBox\" FROM OWHS A LEFT OUTER JOIN OBPL B ON A.\"BPLid\" = B.\"BPLId\" LEFT OUTER JOIN USR6 C ON B.\"BPLId\"=C.\"BPLId\" LEFT OUTER JOIN \"TL_WAREH\" D ON A.\"WhsCode\"=D.\"WhsCode\" and C.\"UserID\"=D.\"UserID\" WHERE C.\"UserID\"='" + title1 + "' and LOWER(A.\"WhsCode\") like LOWER('%" + textbox + "%')";
-                dataTable.ExecuteQuery(Query1);
-                if (dataTable.IsEmpty)
+                if (sForm.Mode == SAPbouiCOM.BoFormMode.fm_UPDATE_MODE)
                 {
-                    SBO_Application.MessageBox("Value is empty", 1, "Okay");
-                    txtFind.Value = "";
+                    SBO_Application.MessageBox("Please, Update on Warehouse", 1, "", "", "");
                 }
-                oMatrix.LoadFromDataSourceEx();
-                sForm.Mode = SAPbouiCOM.BoFormMode.fm_OK_MODE;
+                else
+                {
+                    char[] charsToTrim = { '<', '/', 'U', 'S', 'E', 'R', 'I', 'D', '>', '<', '/', 'U', 's', 'e', 'r', 'P', 'a', 'r', 'a', 'm', 's', '>' };
+                    string title1 = oOrderForm.BusinessObject.Key.Substring(60).Trim(charsToTrim);
+                    string textbox = txtFind.Value.ToString();
+                    string Query = "SELECT ROW_NUMBER() OVER(ORDER BY B.\"BPLId\",A.\"WhsCode\") AS \"A\",B.\"BPLName\",A.\"WhsCode\",A.\"WhsName\",CASE WHEN D.\"WhsCode\" IS NOT NULL and D.\"UserID\" IS NOT NULL THEN 'Y' ELSE 'N' END \"CheckBox\" FROM OWHS A LEFT OUTER JOIN OBPL B ON A.\"BPLid\" = B.\"BPLId\" LEFT OUTER JOIN USR6 C ON B.\"BPLId\"=C.\"BPLId\" LEFT OUTER JOIN \"TL_WAREH\" D ON A.\"WhsCode\"=D.\"WhsCode\" and C.\"UserID\"=D.\"UserID\" WHERE C.\"UserID\"='" + title1 + "' ORDER BY B.\"BPLId\",A.\"WhsCode\"";
+                    string Query2 = "SELECT ROW_NUMBER() OVER(ORDER BY B.\"BPLId\",A.\"WhsCode\") AS \"A\",B.\"BPLName\",A.\"WhsCode\",A.\"WhsName\",CASE WHEN D.\"WhsCode\" IS NOT NULL and D.\"UserID\" IS NOT NULL THEN 'Y' ELSE 'N' END \"CheckBox\" FROM OWHS A LEFT OUTER JOIN OBPL B ON A.\"BPLid\" = B.\"BPLId\" LEFT OUTER JOIN USR6 C ON B.\"BPLId\"=C.\"BPLId\" LEFT OUTER JOIN \"TL_WAREH\" D ON A.\"WhsCode\"=D.\"WhsCode\" and C.\"UserID\"=D.\"UserID\" WHERE C.\"UserID\"='" + title1 + "' and LOWER(A.\"WhsCode\") like LOWER('%" + textbox + "%')";
+                    string Query1 = "SELECT ROW_NUMBER() OVER(ORDER BY CASE WHEN (LOWER(A.\"WhsCode\") like LOWER('" + textbox + "%')) THEN LOWER('" + textbox + "%') END DESC,A.\"BPLId\",A.\"WhsCode\") AS \"A\",* " +
+                                    "FROM (SELECT B.\"BPLName\",A.\"WhsCode\",A.\"WhsName\"" +
+                                    ",CASE WHEN D.\"WhsCode\" IS NOT NULL and D.\"UserID\" IS NOT NULL THEN 'Y' ELSE 'N' END \"CheckBox\",B.\"BPLId\" FROM OWHS A " +
+                                    "LEFT OUTER JOIN OBPL B ON A.\"BPLid\" = B.\"BPLId\" " +
+                                    "LEFT OUTER JOIN USR6 C ON B.\"BPLId\"=C.\"BPLId\" " +
+                                    "LEFT OUTER JOIN \"TL_WAREH\" D ON A.\"WhsCode\"=D.\"WhsCode\" and C.\"UserID\"=D.\"UserID\" " +
+                                    "WHERE C.\"UserID\"='" + title1 + "' " +
+                                    "ORDER BY CASE WHEN (LOWER(A.\"WhsCode\") like LOWER('" + textbox + "%')) THEN LOWER('" + textbox + "%') " +
+                                    "WHEN (LOWER(A.\"WhsCode\") NOT LIKE LOWER('" + textbox + "%')) THEN LOWER('" + textbox + "%') END DESC,B.\"BPLId\",A.\"WhsCode\") A";
+                    if (string.IsNullOrEmpty(textbox))
+                    {
+                        //mItem.Visible = false;
+                        dataTable.ExecuteQuery(Query);
+                        oMatrix.LoadFromDataSourceEx();
+                        oMatrix.SelectionMode = SAPbouiCOM.BoMatrixSelect.ms_None;
+                        // oMatrix.SelectRow(0, true, true);
+                        //mItem.Visible = true;
+                    }
+                    else
+                    {
+                        // mItem.Visible = false;
+                        dataTableM.ExecuteQuery(Query2);
+                        if (dataTableM.IsEmpty)
+                        {
+                            //SBO_Application.SetStatusBarMessage("There are not found [Warehouse Code]", SAPbouiCOM.BoMessageTime.bmt_Short, true);
+                            SBO_Application.MessageBox("The [Warehouse Code] are not found", 1, "", "", "");
+                            //throw new ArithmeticException("Access denied -");
+                            dataTable.ExecuteQuery(Query1);
+                            oMatrix.LoadFromDataSourceEx();
+                            oMatrix.SelectionMode = SAPbouiCOM.BoMatrixSelect.ms_None;
+                            //oMatrix.SelectRow(1, true, true);
+                        }
+                        else
+                        {
+                            dataTable.ExecuteQuery(Query1);
+                            oMatrix.LoadFromDataSourceEx();
+                            oMatrix.SelectionMode = SAPbouiCOM.BoMatrixSelect.ms_Single;
+                            oMatrix.SelectRow(1, true, true);
+                            mItem.Visible = true;
+                        }
+
+                    }
+                }
+                 //sForm.Mode = SAPbouiCOM.BoFormMode.fm_OK_MODE;
             }
             catch (Exception ex)
             {
@@ -475,8 +518,14 @@ namespace SysForm
         {
             //throw new NotImplementedException();
             BubbleEvent = true;
-            AddMatrix();
-            // AddDataeble();
+            if (oOrderForm.Mode==SAPbouiCOM.BoFormMode.fm_FIND_MODE)
+            {
+                SBO_Application.MessageBox("Please, Select [User Code]");
+            }
+            else
+            {
+                AddMatrix();
+            }
         }
         private void SBO_Application_ItemEvent(string FormUID, ref SAPbouiCOM.ItemEvent pVal, out bool BubbleEvent)
         {
@@ -522,7 +571,7 @@ namespace SysForm
                         oOrderForm.Mode = SAPbouiCOM.BoFormMode.fm_OK_MODE;
                     }
                 }
-                if (pVal.FormType == 20700 & pVal.ItemUID == "1" & oOrderForm.Mode == SAPbouiCOM.BoFormMode.fm_UPDATE_MODE)
+                if (pVal.FormType == 20700 & pVal.ItemUID == "1" & oOrderForm.PaneLevel==4 & oOrderForm.Mode == SAPbouiCOM.BoFormMode.fm_UPDATE_MODE)
                 {
                     DeleteLOB();
                     AddLOB();
