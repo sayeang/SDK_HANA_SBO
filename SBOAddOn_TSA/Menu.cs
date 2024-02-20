@@ -7,8 +7,6 @@ namespace SBOAddOn_TSA
 {
     class Menu
     {
-        //private SAPbouiCOM.Application SBO_Application;
-
         public void AddMenuItems()
         {
             SAPbouiCOM.Menus oMenus = null;
@@ -21,20 +19,20 @@ namespace SBOAddOn_TSA
             oCreationPackage = ((SAPbouiCOM.MenuCreationParams)(Application.SBO_Application.CreateObject(SAPbouiCOM.BoCreatableObjectType.cot_MenuCreationParams)));
             oMenuItem = Application.SBO_Application.Menus.Item("43520"); // moudles'
 
-            SAPbobsCOM.Company oCompany = new SAPbobsCOM.Company();
+            //SAPbobsCOM.Company oCompany = new SAPbobsCOM.Company();
             //oCompany = (SAPbobsCOM.Company)Application.SBO_Application.Company.GetDICompany();
 
             //Declare Varible sPath that store directory 
-            //string sPath = null;
-            //sPath = System.Environment.CurrentDirectory + @"\bin\Debug\Biz-Logo16x16.bmp";
-            //sPath = sPath.Remove(sPath.Length - 9, 9);
+            string oPath = null;
+            oPath = System.Environment.CurrentDirectory + @"\BIZLOGO.png";
+            oPath = oPath.Remove(oPath.Length - 9, 9);
         
             oCreationPackage.Type = SAPbouiCOM.BoMenuType.mt_POPUP;
             oCreationPackage.UniqueID = "BIZD";
             oCreationPackage.String = "BIZ Add-on";
-            //oCreationPackage.Image = sPath;
             oCreationPackage.Enabled = true;
-            oCreationPackage.Position = -1;
+            oCreationPackage.Image = oPath;
+            oCreationPackage.Position = -1;            
 
             oMenus = oMenuItem.SubMenus;
 
@@ -110,7 +108,7 @@ namespace SBOAddOn_TSA
             }
             catch (Exception ex)
             {
-            //    //Application.SBO_Application.MessageBox(ex.ToString(), 1, "Ok", "", "");
+                Application.SBO_Application.SetStatusBarMessage(ex.Message, SAPbouiCOM.BoMessageTime.bmt_Short, true);
             }
         }
 
