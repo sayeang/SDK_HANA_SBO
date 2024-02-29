@@ -444,7 +444,7 @@ namespace SysForm {
 
                     oFolderItem = ((SAPbouiCOM.Folder)(oNewItem.Specific));
 
-                    oFolderItem.Caption = "User Folder";
+                    oFolderItem.Caption = "Data Restriction";
                     oFolderItem.PressedBefore += OFolderItem_PressedBefore;
                     // group the folder with the desired folder item
                     oFolderItem.GroupWith("234000058");
