@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<AddOnRegData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" SlientInstallation="No" SlientUpgrade="No" Partnernmsp="Warehouse and Line of business " SchemaVersion="3.0" Type="" MultipleVersion="false" OnDemand="" OnPremise="" ExtName="SysForm" ExtVersion="1.0.0.1" Contdata="" Partner="SDK" DBType="Both" ClientType="A">
+<AddOnRegData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" SlientInstallation="No" SlientUpgrade="No" Partnernmsp="Document Setting" SchemaVersion="3.0" Type="" MultipleVersion="false" OnDemand="" OnPremise="" ExtName="Doc_Settings" ExtVersion="2.0.0.6" Contdata="" Partner="Document Setting" DBType="Both" ClientType="A">
   <Validity>
     <SBOCompatibility>
-      <Version From="1.0.0.1" To="1.0.0.10" />
+      <Version From="2.0.0.1" To="2.0.0.10" />
     </SBOCompatibility>
   </Validity>
   <Configuration>
@@ -18,39 +18,57 @@
   </Configuration>
   <Addons>
     <Addon Name="" Group="" ForceFlag="" Visible="" AutoAssign="" SelfUpgrd="">
-      <x86 AddonExe="C:\Users\BIZ003\OneDrive - BIZDIMENSION CO., LTD\SAP Business One Studio\SDK_HANA_SBO-div\Warehouse_Branch Project\bin\Debug\SysForm.exe" AddonSig="">
+      <x86 AddonExe="C:\Users\LENOVO\OneDrive - BIZDIMENSION CO., LTD\Visual Studio\SDK_HANA_SBO\SBOAddonProject_Setting\bin\Debug\SBOAddonProject_Setting.exe" AddonSig="">
         <Installation>
           <Files>
-            <File FileName="SysForm.exe">
+            <File FileName="SBOAddonProject_Setting.b1s">
+              <Actions />
+            </File>
+            <File FileName="SBOAddonProject_Setting.exe">
+              <Actions />
+            </File>
+            <File FileName="SBOAddonProject_Setting.pdb">
               <Actions />
             </File>
           </Files>
         </Installation>
         <Uninstallation>
           <Files>
-            <File FileName="SysForm.exe">
+            <File FileName="SBOAddonProject_Setting.b1s">
+              <Actions />
+            </File>
+            <File FileName="SBOAddonProject_Setting.exe">
+              <Actions />
+            </File>
+            <File FileName="SBOAddonProject_Setting.pdb">
               <Actions />
             </File>
           </Files>
         </Uninstallation>
       </x86>
-      <x64 AddonExe="C:\Users\BIZ003\OneDrive - BIZDIMENSION CO., LTD\SAP Business One Studio\SDK_HANA_SBO-div\Warehouse_Branch Project\bin\Debug\SysForm.exe" AddonSig="">
+      <x64 AddonExe="C:\Users\LENOVO\OneDrive - BIZDIMENSION CO., LTD\Visual Studio\SDK_HANA_SBO\SBOAddonProject_Setting\bin\Debug\SBOAddonProject_Setting.exe" AddonSig="">
         <Installation>
           <Files>
-            <File FileName="SysForm.exe">
+            <File FileName="SBOAddonProject_Setting.b1s">
               <Actions />
             </File>
-            <File FileName="SysForm.exe.config">
+            <File FileName="SBOAddonProject_Setting.exe">
+              <Actions />
+            </File>
+            <File FileName="SBOAddonProject_Setting.pdb">
               <Actions />
             </File>
           </Files>
         </Installation>
         <Uninstallation>
           <Files>
-            <File FileName="SysForm.exe">
+            <File FileName="SBOAddonProject_Setting.b1s">
               <Actions />
             </File>
-            <File FileName="SysForm.exe.config">
+            <File FileName="SBOAddonProject_Setting.exe">
+              <Actions />
+            </File>
+            <File FileName="SBOAddonProject_Setting.pdb">
               <Actions />
             </File>
           </Files>

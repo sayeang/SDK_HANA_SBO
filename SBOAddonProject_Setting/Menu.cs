@@ -53,7 +53,8 @@ namespace SBOAddonProject_Setting
             }
             catch (Exception er)
             { //  Menu already exists
-                Application.SBO_Application.SetStatusBarMessage("Menu Already Exists", SAPbouiCOM.BoMessageTime.bmt_Short, true);
+               
+                Application.SBO_Application.SetStatusBarMessage("Menu Already Exists", SAPbouiCOM.BoMessageTime.bmt_Short ,true);
             }
         }
 

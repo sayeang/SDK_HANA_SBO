@@ -7,3 +7,14 @@ D:\GitHub Projects\SBOAddOn_TSA\SBOAddOn_TSA\obj\Debug\SBOAddOn_TSA.exe
 D:\GitHub Projects\SBOAddOn_TSA\SBOAddOn_TSA\obj\Debug\SBOAddOn_TSA.pdb
 D:\GitHub Projects\SBOAddOn_TSA\SBOAddOn_TSA\bin\Debug\SAPBusinessOneSDK.dll
 D:\GitHub Projects\SBOAddOn_TSA\SBOAddOn_TSA\obj\Debug\SBOAddOn_TSA.csprojResolveAssemblyReference.cache
+C:\Users\BIZ003\OneDrive - BIZDIMENSION CO., LTD\Visual Studio\SDK_HANA_SBO\SBOAddOn_TSA\bin\Debug\SBOAddOn_TSA.exe.config
+C:\Users\BIZ003\OneDrive - BIZDIMENSION CO., LTD\Visual Studio\SDK_HANA_SBO\SBOAddOn_TSA\bin\Debug\SBOAddOn_TSA.exe
+C:\Users\BIZ003\OneDrive - BIZDIMENSION CO., LTD\Visual Studio\SDK_HANA_SBO\SBOAddOn_TSA\bin\Debug\SBOAddOn_TSA.pdb
+C:\Users\BIZ003\OneDrive - BIZDIMENSION CO., LTD\Visual Studio\SDK_HANA_SBO\SBOAddOn_TSA\bin\Debug\SAPBusinessOneSDK.dll
+C:\Users\BIZ003\OneDrive - BIZDIMENSION CO., LTD\Visual Studio\SDK_HANA_SBO\SBOAddOn_TSA\obj\Debug\SBOAddOn_TSA.csprojAssemblyReference.cache
+C:\Users\BIZ003\OneDrive - BIZDIMENSION CO., LTD\Visual Studio\SDK_HANA_SBO\SBOAddOn_TSA\obj\Debug\SBOAddOn_TSA.Properties.Resources.resources
+C:\Users\BIZ003\OneDrive - BIZDIMENSION CO., LTD\Visual Studio\SDK_HANA_SBO\SBOAddOn_TSA\obj\Debug\SBOAddOn_TSA.csproj.GenerateResource.cache
+C:\Users\BIZ003\OneDrive - BIZDIMENSION CO., LTD\Visual Studio\SDK_HANA_SBO\SBOAddOn_TSA\obj\Debug\SBOAddOn_TSA.csproj.CoreCompileInputs.cache
+C:\Users\BIZ003\OneDrive - BIZDIMENSION CO., LTD\Visual Studio\SDK_HANA_SBO\SBOAddOn_TSA\obj\Debug\SBOAddOn_TSA.csproj.CopyComplete
+C:\Users\BIZ003\OneDrive - BIZDIMENSION CO., LTD\Visual Studio\SDK_HANA_SBO\SBOAddOn_TSA\obj\Debug\SBOAddOn_TSA.exe
+C:\Users\BIZ003\OneDrive - BIZDIMENSION CO., LTD\Visual Studio\SDK_HANA_SBO\SBOAddOn_TSA\obj\Debug\SBOAddOn_TSA.pdb
