@@ -14,8 +14,11 @@
     <FallbackCulture>en-US</FallbackCulture>
     <VerifyUploadedFiles>false</VerifyUploadedFiles>
   </PropertyGroup>
+<<<<<<< HEAD
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'SBOAddOn_TSA|AnyCPU'">
     <StartArguments>
     </StartArguments>
   </PropertyGroup>
+=======
+>>>>>>> 028788b613725b44a1cf2e1529a6bc2a5bc005f3
 </Project>

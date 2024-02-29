@@ -79,6 +79,7 @@ namespace SBOAddOn_TSA.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+<<<<<<< HEAD
         
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -109,5 +110,7 @@ namespace SBOAddOn_TSA.Properties {
                 return ((System.Drawing.Icon)(obj));
             }
         }
+=======
+>>>>>>> 028788b613725b44a1cf2e1529a6bc2a5bc005f3
     }
 }

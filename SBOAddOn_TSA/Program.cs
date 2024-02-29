@@ -22,11 +22,8 @@ namespace SBOAddOn_TSA
                 else
                 {
                     //If you want to use an add-on identifier for the development license, you can specify an add-on identifier string as the second parameter.
-                    ////Implementation 
-                    //oApp = new Application(args[0], "5645523035496D706C656D656E746174696F6E3A4C30343433363437383030132992F114398A733AB069C69874150D1976CBDF");
-                    ////Development
                     oApp = new Application(args[0], "5645523035446576656C6F706D656E743A4C30343433363437383030975ECC16F61EC64FED5F6DA1427614247AD80183");
-                    oApp = new Application(args[0]);
+                    //oApp = new Application(args[0]);
                 }
                 Menu MyMenu = new Menu();
                 MyMenu.AddMenuItems();

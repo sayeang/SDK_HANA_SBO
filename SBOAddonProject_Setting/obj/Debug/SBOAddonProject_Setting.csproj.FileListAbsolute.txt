@@ -1,0 +1,32 @@
+C:\Users\BIZ003\OneDrive - BIZDIMENSION CO., LTD\SAP Business One Studio\SDK_HANA_SBO-div\SBOAddonProject_Setting\bin\Debug\SBOAddonProject_Setting.exe
+C:\Users\BIZ003\OneDrive - BIZDIMENSION CO., LTD\SAP Business One Studio\SDK_HANA_SBO-div\SBOAddonProject_Setting\bin\Debug\SBOAddonProject_Setting.pdb
+C:\Users\BIZ003\OneDrive - BIZDIMENSION CO., LTD\SAP Business One Studio\SDK_HANA_SBO-div\SBOAddonProject_Setting\bin\Debug\SAPBusinessOneSDK.dll
+C:\Users\BIZ003\OneDrive - BIZDIMENSION CO., LTD\SAP Business One Studio\SDK_HANA_SBO-div\SBOAddonProject_Setting\obj\Debug\SBOAddonProject_Setting.csprojAssemblyReference.cache
+C:\Users\BIZ003\OneDrive - BIZDIMENSION CO., LTD\SAP Business One Studio\SDK_HANA_SBO-div\SBOAddonProject_Setting\obj\Debug\SBOAddonProject_Setting.csproj.CoreCompileInputs.cache
+C:\Users\BIZ003\OneDrive - BIZDIMENSION CO., LTD\SAP Business One Studio\SDK_HANA_SBO-div\SBOAddonProject_Setting\obj\Debug\SBOAddonProject_Setting.csproj.CopyComplete
+C:\Users\BIZ003\OneDrive - BIZDIMENSION CO., LTD\SAP Business One Studio\SDK_HANA_SBO-div\SBOAddonProject_Setting\obj\Debug\SBOAddonProject_Setting.exe
+C:\Users\BIZ003\OneDrive - BIZDIMENSION CO., LTD\SAP Business One Studio\SDK_HANA_SBO-div\SBOAddonProject_Setting\obj\Debug\SBOAddonProject_Setting.pdb
+C:\Users\BIZ003\OneDrive - BIZDIMENSION CO., LTD\Visual Studio\SDK_HANA_SBO-div\SBOAddonProject_Setting\bin\Debug\SBOAddonProject_Setting.exe
+C:\Users\BIZ003\OneDrive - BIZDIMENSION CO., LTD\Visual Studio\SDK_HANA_SBO-div\SBOAddonProject_Setting\bin\Debug\SBOAddonProject_Setting.pdb
+C:\Users\BIZ003\OneDrive - BIZDIMENSION CO., LTD\Visual Studio\SDK_HANA_SBO-div\SBOAddonProject_Setting\bin\Debug\SAPBusinessOneSDK.dll
+C:\Users\BIZ003\OneDrive - BIZDIMENSION CO., LTD\Visual Studio\SDK_HANA_SBO-div\SBOAddonProject_Setting\obj\Debug\SBOAddonProject_Setting.csprojAssemblyReference.cache
+C:\Users\BIZ003\OneDrive - BIZDIMENSION CO., LTD\Visual Studio\SDK_HANA_SBO-div\SBOAddonProject_Setting\obj\Debug\SBOAddonProject_Setting.csproj.CoreCompileInputs.cache
+C:\Users\BIZ003\OneDrive - BIZDIMENSION CO., LTD\Visual Studio\SDK_HANA_SBO-div\SBOAddonProject_Setting\obj\Debug\SBOAddonProject_Setting.csproj.CopyComplete
+C:\Users\BIZ003\OneDrive - BIZDIMENSION CO., LTD\Visual Studio\SDK_HANA_SBO-div\SBOAddonProject_Setting\obj\Debug\SBOAddonProject_Setting.exe
+C:\Users\BIZ003\OneDrive - BIZDIMENSION CO., LTD\Visual Studio\SDK_HANA_SBO-div\SBOAddonProject_Setting\obj\Debug\SBOAddonProject_Setting.pdb
+C:\Users\LENOVO\OneDrive - BIZDIMENSION CO., LTD\Visual Studio\SDK_HANA_SBO-div\SBOAddonProject_Setting\bin\Debug\SBOAddonProject_Setting.exe
+C:\Users\LENOVO\OneDrive - BIZDIMENSION CO., LTD\Visual Studio\SDK_HANA_SBO-div\SBOAddonProject_Setting\bin\Debug\SBOAddonProject_Setting.pdb
+C:\Users\LENOVO\OneDrive - BIZDIMENSION CO., LTD\Visual Studio\SDK_HANA_SBO-div\SBOAddonProject_Setting\bin\Debug\SAPBusinessOneSDK.dll
+C:\Users\LENOVO\OneDrive - BIZDIMENSION CO., LTD\Visual Studio\SDK_HANA_SBO-div\SBOAddonProject_Setting\obj\Debug\SBOAddonProject_Setting.csprojAssemblyReference.cache
+C:\Users\LENOVO\OneDrive - BIZDIMENSION CO., LTD\Visual Studio\SDK_HANA_SBO-div\SBOAddonProject_Setting\obj\Debug\SBOAddonProject_Setting.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\OneDrive - BIZDIMENSION CO., LTD\Visual Studio\SDK_HANA_SBO-div\SBOAddonProject_Setting\obj\Debug\SBOAddonProject_Setting.csproj.CopyComplete
+C:\Users\LENOVO\OneDrive - BIZDIMENSION CO., LTD\Visual Studio\SDK_HANA_SBO-div\SBOAddonProject_Setting\obj\Debug\SBOAddonProject_Setting.exe
+C:\Users\LENOVO\OneDrive - BIZDIMENSION CO., LTD\Visual Studio\SDK_HANA_SBO-div\SBOAddonProject_Setting\obj\Debug\SBOAddonProject_Setting.pdb
+C:\Users\BIZ003\OneDrive - BIZDIMENSION CO., LTD\Visual Studio\SDK_HANA_SBO\SBOAddonProject_Setting\bin\Debug\SBOAddonProject_Setting.exe
+C:\Users\BIZ003\OneDrive - BIZDIMENSION CO., LTD\Visual Studio\SDK_HANA_SBO\SBOAddonProject_Setting\bin\Debug\SBOAddonProject_Setting.pdb
+C:\Users\BIZ003\OneDrive - BIZDIMENSION CO., LTD\Visual Studio\SDK_HANA_SBO\SBOAddonProject_Setting\bin\Debug\SAPBusinessOneSDK.dll
+C:\Users\BIZ003\OneDrive - BIZDIMENSION CO., LTD\Visual Studio\SDK_HANA_SBO\SBOAddonProject_Setting\obj\Debug\SBOAddonProject_Setting.csprojAssemblyReference.cache
+C:\Users\BIZ003\OneDrive - BIZDIMENSION CO., LTD\Visual Studio\SDK_HANA_SBO\SBOAddonProject_Setting\obj\Debug\SBOAddonProject_Setting.csproj.CoreCompileInputs.cache
+C:\Users\BIZ003\OneDrive - BIZDIMENSION CO., LTD\Visual Studio\SDK_HANA_SBO\SBOAddonProject_Setting\obj\Debug\SBOAddonProject_Setting.csproj.CopyComplete
+C:\Users\BIZ003\OneDrive - BIZDIMENSION CO., LTD\Visual Studio\SDK_HANA_SBO\SBOAddonProject_Setting\obj\Debug\SBOAddonProject_Setting.exe
+C:\Users\BIZ003\OneDrive - BIZDIMENSION CO., LTD\Visual Studio\SDK_HANA_SBO\SBOAddonProject_Setting\obj\Debug\SBOAddonProject_Setting.pdb

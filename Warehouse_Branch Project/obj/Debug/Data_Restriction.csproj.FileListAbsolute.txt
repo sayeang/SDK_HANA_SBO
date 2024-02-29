@@ -1,0 +1,17 @@
+C:\Users\BIZ003\OneDrive - BIZDIMENSION CO., LTD\Visual Studio\SDK_HANA_SBO-div\Warehouse_Branch Project\bin\Debug\Data_Restriction.exe.config
+C:\Users\BIZ003\OneDrive - BIZDIMENSION CO., LTD\Visual Studio\SDK_HANA_SBO-div\Warehouse_Branch Project\bin\Debug\Data_Restriction.exe
+C:\Users\BIZ003\OneDrive - BIZDIMENSION CO., LTD\Visual Studio\SDK_HANA_SBO-div\Warehouse_Branch Project\bin\Debug\Data_Restriction.pdb
+C:\Users\BIZ003\OneDrive - BIZDIMENSION CO., LTD\Visual Studio\SDK_HANA_SBO-div\Warehouse_Branch Project\bin\Debug\SAPBusinessOneSDK.dll
+C:\Users\BIZ003\OneDrive - BIZDIMENSION CO., LTD\Visual Studio\SDK_HANA_SBO-div\Warehouse_Branch Project\obj\Debug\Data_Restriction.csproj.CoreCompileInputs.cache
+C:\Users\BIZ003\OneDrive - BIZDIMENSION CO., LTD\Visual Studio\SDK_HANA_SBO-div\Warehouse_Branch Project\obj\Debug\Data_Restriction.csproj.CopyComplete
+C:\Users\BIZ003\OneDrive - BIZDIMENSION CO., LTD\Visual Studio\SDK_HANA_SBO-div\Warehouse_Branch Project\obj\Debug\Data_Restriction.exe
+C:\Users\BIZ003\OneDrive - BIZDIMENSION CO., LTD\Visual Studio\SDK_HANA_SBO-div\Warehouse_Branch Project\obj\Debug\Data_Restriction.pdb
+C:\Users\BIZ003\OneDrive - BIZDIMENSION CO., LTD\Visual Studio\SDK_HANA_SBO\Warehouse_Branch Project\bin\Debug\Data_Restriction.exe.config
+C:\Users\BIZ003\OneDrive - BIZDIMENSION CO., LTD\Visual Studio\SDK_HANA_SBO\Warehouse_Branch Project\bin\Debug\Data_Restriction.exe
+C:\Users\BIZ003\OneDrive - BIZDIMENSION CO., LTD\Visual Studio\SDK_HANA_SBO\Warehouse_Branch Project\bin\Debug\Data_Restriction.pdb
+C:\Users\BIZ003\OneDrive - BIZDIMENSION CO., LTD\Visual Studio\SDK_HANA_SBO\Warehouse_Branch Project\bin\Debug\SAPBusinessOneSDK.dll
+C:\Users\BIZ003\OneDrive - BIZDIMENSION CO., LTD\Visual Studio\SDK_HANA_SBO\Warehouse_Branch Project\obj\Debug\Data_Restriction.csprojAssemblyReference.cache
+C:\Users\BIZ003\OneDrive - BIZDIMENSION CO., LTD\Visual Studio\SDK_HANA_SBO\Warehouse_Branch Project\obj\Debug\Data_Restriction.csproj.CoreCompileInputs.cache
+C:\Users\BIZ003\OneDrive - BIZDIMENSION CO., LTD\Visual Studio\SDK_HANA_SBO\Warehouse_Branch Project\obj\Debug\Data_Restriction.csproj.CopyComplete
+C:\Users\BIZ003\OneDrive - BIZDIMENSION CO., LTD\Visual Studio\SDK_HANA_SBO\Warehouse_Branch Project\obj\Debug\Data_Restriction.exe
+C:\Users\BIZ003\OneDrive - BIZDIMENSION CO., LTD\Visual Studio\SDK_HANA_SBO\Warehouse_Branch Project\obj\Debug\Data_Restriction.pdb

@@ -1,0 +1,8 @@
+C:\Users\BIZ003\OneDrive - BIZDIMENSION CO., LTD\Visual Studio\SDK_HANA_SBO\Copy_Form\bin\Debug\Copy_Form.exe
+C:\Users\BIZ003\OneDrive - BIZDIMENSION CO., LTD\Visual Studio\SDK_HANA_SBO\Copy_Form\bin\Debug\Copy_Form.pdb
+C:\Users\BIZ003\OneDrive - BIZDIMENSION CO., LTD\Visual Studio\SDK_HANA_SBO\Copy_Form\bin\Debug\SAPBusinessOneSDK.dll
+C:\Users\BIZ003\OneDrive - BIZDIMENSION CO., LTD\Visual Studio\SDK_HANA_SBO\Copy_Form\obj\Debug\Copy_From.csprojAssemblyReference.cache
+C:\Users\BIZ003\OneDrive - BIZDIMENSION CO., LTD\Visual Studio\SDK_HANA_SBO\Copy_Form\obj\Debug\Copy_From.csproj.CoreCompileInputs.cache
+C:\Users\BIZ003\OneDrive - BIZDIMENSION CO., LTD\Visual Studio\SDK_HANA_SBO\Copy_Form\obj\Debug\Copy_From.csproj.CopyComplete
+C:\Users\BIZ003\OneDrive - BIZDIMENSION CO., LTD\Visual Studio\SDK_HANA_SBO\Copy_Form\obj\Debug\Copy_Form.exe
+C:\Users\BIZ003\OneDrive - BIZDIMENSION CO., LTD\Visual Studio\SDK_HANA_SBO\Copy_Form\obj\Debug\Copy_Form.pdb
